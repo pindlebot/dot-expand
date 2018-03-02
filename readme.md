@@ -1,5 +1,7 @@
 # dot-expand
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unshift/dot-expand.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 Expand key-value pairs whose keys are in dot notation (.e.g, `users.name`) into 
