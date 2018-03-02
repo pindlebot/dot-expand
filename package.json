@@ -3,6 +3,19 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "description": "Expand key-value pairs whose keys use dot-notation",
+  "keywords": [
+    "expand",
+    "deep",
+    "path",
+    "property",
+    "dot",
+    "prop",
+    "object",
+    "obj",
+    "notation",
+    "nested"
+  ],
   "dependencies": {
     "deepmerge": "^2.0.1"
   }
