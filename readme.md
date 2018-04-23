@@ -2,8 +2,7 @@
 
 ## Installation
 
-Expand key-value pairs whose keys are in dot notation (.e.g, `users.name`) into 
-objects.
+Expand key-value pairs whose keys are in dot notation (.e.g, `users.name`) into objects.
 
 ```bash
 npm i dot-expand --save
