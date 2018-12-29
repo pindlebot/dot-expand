@@ -1,6 +1,6 @@
 {
   "name": "dot-expand",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "description": "Expand key-value pairs whose keys use dot-notation",
