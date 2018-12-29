@@ -13,7 +13,7 @@ yarn add dot-expand
 ## Example
 
 ```js
-const expand = require('dot-expand')
+import expand from 'dot-expand'
 
 const pojo = expand({
   'users.df01d9e5.name': 'Tom',
