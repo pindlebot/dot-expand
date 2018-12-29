@@ -1,34 +1,12 @@
-const deepmerge = require('deepmerge')
+const set = require('lodash.set')
 
-const get = (obj, path) => path.reduce((acc, val) => 
-  acc[val] ? acc[val] : undefined, obj)
+Object.defineProperty(exports, '__esModule', {
+  value: true
+})
 
-const set = (obj, path, value) => {
-  let clone = path.slice(0)
-  const end = clone.pop()
-  const child = get(obj, clone)
-  child[end] = value
-  return obj
+exports.default = exports.expand = (obj, opts = {}) => {
+  return Object.keys(obj).reduce((a, c) => {
+    set(a, c, obj[c])
+    return a
+  }, {})
 }
-
-function dotExpand(dot, opts = {}) {
-  let data = {}
-  let keys = Object.keys(dot)
-  
-  while(keys.length) {
-    let key = keys.shift()
-    let value = dot[key] 
-    let path = key.split(/[./]/)
-    let expanded = path.reduce((acc, val, i) => {
-      if (!get(acc, path.slice(0, i))) {
-        set(acc, path.slice(0, i), {})
-      }
-      return acc
-    }, {})
-    set(expanded, path, value)
-    data = deepmerge(data, expanded, opts)
-  }
-  return data
-}
-
-module.exports = dotExpand

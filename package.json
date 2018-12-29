@@ -16,7 +16,13 @@
     "notation",
     "nested"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
-    "deepmerge": "^2.0.1"
+    "lodash.set": "^4.3.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
