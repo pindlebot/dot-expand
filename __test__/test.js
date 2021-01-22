@@ -15,3 +15,10 @@ it('expand should expand objects with keys in dot notation', () => {
     }
   })
 })
+
+it('expand should not expand objects with blacklisted keys', () => {
+  let out = expand({ '__proto__.polluted': true })
+
+  expect(out).toMatchObject({})
+  expect({}.polluted).toBe(undefined)
+})
